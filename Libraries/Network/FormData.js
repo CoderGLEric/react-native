@@ -1,5 +1,8 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
+
+
+
+
+ * Copyright [2016] Henry Baez], Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
