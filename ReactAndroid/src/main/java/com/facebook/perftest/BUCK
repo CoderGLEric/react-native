@@ -1,11 +1,9 @@
-android_library(
-  name = 'perftest',
-  srcs = glob(['*.java']),
-  visibility = [
-    'PUBLIC',
-  ],
-)
+include_defs("//ReactAndroid/DEFS")
 
-project_config(
-  src_target = ':perftest',
+android_library(
+    name = "perftest",
+    srcs = glob(["*.java"]),
+    visibility = [
+        "PUBLIC",
+    ],
 )

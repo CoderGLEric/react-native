@@ -11,10 +11,10 @@
  */
 'use strict';
 
+var ColorPropType = require('ColorPropType');
 var ImageResizeMode = require('ImageResizeMode');
 var LayoutPropTypes = require('LayoutPropTypes');
-var ReactPropTypes = require('ReactPropTypes');
-var ColorPropType = require('ColorPropType');
+var ReactPropTypes = require('prop-types');
 var ShadowPropTypesIOS = require('ShadowPropTypesIOS');
 var TransformPropTypes = require('TransformPropTypes');
 
@@ -30,10 +30,8 @@ var ImageStylePropTypes = {
   borderRadius: ReactPropTypes.number,
   overflow: ReactPropTypes.oneOf(['visible', 'hidden']),
 
-  /** 
-   * iOS-Specific style to "tint" an image.
+  /**
    * Changes the color of all the non-transparent pixels to the tintColor.
-   * @platform ios
    */
   tintColor: ColorPropType,
   opacity: ReactPropTypes.number,
@@ -44,7 +42,7 @@ var ImageStylePropTypes = {
    * implementation of rounded corners:
    *   - Certain resize modes, such as 'contain'
    *   - Animated GIFs
-   * 
+   *
    * A typical way to use this prop is with images displayed on a solid
    * background and setting the `overlayColor` to the same color
    * as the background.
@@ -55,6 +53,12 @@ var ImageStylePropTypes = {
    * @platform android
   */
   overlayColor: ReactPropTypes.string,
+
+  // Android-Specific styles
+  borderTopLeftRadius: ReactPropTypes.number,
+  borderTopRightRadius: ReactPropTypes.number,
+  borderBottomLeftRadius: ReactPropTypes.number,
+  borderBottomRightRadius: ReactPropTypes.number,
 };
 
 module.exports = ImageStylePropTypes;
